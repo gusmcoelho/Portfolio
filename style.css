@@ -491,8 +491,25 @@ footer {
         padding-top: 40px;
     }
 
+    .hero-image {
+        width: 260px;
+        height: 260px;
+        margin: 0 auto;
+    }
+
+    .hero .description {
+        margin: 0 auto 30px auto;
+    }
+
     .hero-actions {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-actions .btn {
+        width: 100%; /* Botões ocupam largura total no mobile para facilitar o clique */
+        max-width: 280px; /* Mas sem ficar exageradamente grandes */
     }
     
     .about-grid {
