@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Moreira | Portfolio</title>
+    <meta name="description" content="Portfólio de Gustavo Moreira, estudante de Gestão da Tecnologia e Informação. Desenvolvedor Java e Python.">
+    <link rel="icon" type="image/png" href="logo.png?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons for modern, clean icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Animação de entrada (Intro) -->
+    <div class="loader">
+        <div class="intro-content">
+            <img src="logo.png" alt="GM" class="intro-logo">
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo-link">
+                <img src="logo.png" alt="GM Icon" class="logo-img">
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="ph ph-list"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about"><i class="ph ph-user"></i> Sobre</a></li>
+                <li><a href="#projects"><i class="ph ph-briefcase"></i> Projetos</a></li>
+                <li><a href="#contact"><i class="ph ph-envelope"></i> Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-layout">
+                <div class="hero-text">
+                    <p class="greeting reveal">Olá, eu sou o</p>
+                    <h1 class="title reveal fade-up">Gustavo Moreira</h1>
+                    <h2 class="subtitle reveal fade-up delay-1">Desenvolvedor de Sistemas & Automações Inteligentes</h2>
+                    <p class="description reveal fade-up delay-2">
+                        Estudante de Gestão da Tecnologia e Informação (FATEC-SP). Apaixonado por tecnologia, programação (Java, Python) e inovação.
+                    </p>
+                    <div class="hero-actions reveal fade-up delay-3">
+                        <a href="#projects" class="btn btn-primary"><i class="ph ph-folder"></i> Ver Projetos</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="ph ph-paper-plane-tilt"></i> Contato</a>
+                        <a href="cv.html" class="btn btn-outline" target="_blank">
+                            <i class="ph ph-download-simple"></i> Baixar Currículo
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image reveal fade-left delay-2">
+                    <img src="profile.png" alt="Gustavo Moreira" class="profile-img">
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <h2 class="section-title reveal">Sobre Mim<span class="dot">.</span></h2>
+                <div class="about-grid">
+                    <div class="about-text reveal fade-right">
+                        <p>Sou um desenvolvedor apaixonado por tecnologia, localizado em Assis, São Paulo. Atualmente cursando <strong>Gestão da Tecnologia e Informação</strong> (4/6) na Faculdade de Tecnologia de São Paulo (FATEC-SP).</p>
+                        <p>Tenho grande interesse nas áreas de Desenvolvimento de Sistemas e Inteligência Artificial. Busco sempre construir soluções eficientes, aprendendo constantemente sobre <strong>Java, Python</strong>, entre outras tecnologias.</p>
+                        <div class="languages">
+                            <span><i class="ph ph-globe"></i> Idiomas:</span>
+                            <span class="lang-tag">🇧🇷 Português (Nativo)</span>
+                            <span class="lang-tag">🇺🇸 Inglês (Avançado)</span>
+                        </div>
+                    </div>
+                    <div class="about-skills reveal fade-left">
+                        <div class="skill-category">
+                            <h3>Linguagens & Tecnologias</h3>
+                            <div class="skill-tags">
+                                <span>CSS</span>
+                                <span>HTML</span>
+                                <span>Java</span>
+                                <span>JavaScript</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Áreas de Interesse</h3>
+                            <div class="skill-tags">
+                                <span>Desenvolvimento Web</span>
+                                <span>Engenharia de Prompt</span>
+                                <span>Gestão de TI</span>
+                                <span>Inteligência Artificial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <h2 class="section-title reveal">Projetos Recentes<span class="dot">.</span></h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal fade-up">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <i class="ph ph-folder-open folder-icon"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/gusmcoelho/Cookitwos" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Cookitwos</h3>
+                            <p class="project-desc">Trabalho acadêmico (FATEC-SP). Website e identidade visual desenvolvido em CSS, focando em refinamentos visuais e paleta de cores vintage.</p>
+                            <ul class="project-tech">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card reveal fade-up delay-1">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <i class="ph ph-folder-open folder-icon"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/gusmcoelho/Calculadora-Basica" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Calculadora Básica</h3>
+                            <p class="project-desc">Uma calculadora funcional simples construída do zero, reforçando conceitos de lógica e interface web.</p>
+                            <ul class="project-tech">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card reveal fade-up delay-2">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <i class="ph ph-folder-open folder-icon"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/gusmcoelho/Lista-de-a-fazeres-To-Do-List" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">To-Do List</h3>
+                            <p class="project-desc">Aplicação para gerenciamento de tarefas (Lista de a fazeres), permitindo adicionar e controlar atividades diárias.</p>
+                            <ul class="project-tech">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-projects reveal fade-up">
+                    <a href="https://github.com/gusmcoelho" target="_blank" class="btn btn-outline">Ver mais no GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-content reveal">
+                    <h2 class="section-title">Vamos Conversar<span class="dot">?</span></h2>
+                    <p>Estou sempre aberto a novas oportunidades e conexões. Seja para um projeto, dúvida ou apenas para dizer um olá, sinta-se à vontade para me contatar.</p>
+                    <a href="mailto:Gustavomoreiraw@gmail.com" class="btn btn-primary email-btn">Me envie um E-mail</a>
+                    
+                    <div class="social-links mt-4">
+                        <a href="https://github.com/gusmcoelho" target="_blank" aria-label="GitHub">
+                            <i class="ph ph-github-logo"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/gusmcoelho" target="_blank" aria-label="LinkedIn">
+                            <i class="ph ph-linkedin-logo"></i>
+                        </a>
+                        <a href="https://instagram.com/gusmcoelho" target="_blank" aria-label="Instagram">
+                            <i class="ph ph-instagram-logo"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Gustavo Moreira. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
