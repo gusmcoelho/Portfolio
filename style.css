@@ -485,20 +485,33 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.2rem; /* Aumenta a área útil em telas pequenas */
+    }
+
     .hero-layout {
         flex-direction: column-reverse;
         text-align: center;
         padding-top: 40px;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .hero-image {
-        width: 260px;
-        height: 260px;
-        margin: 0 auto;
+        width: 240px;
+        height: 240px;
+        margin: 0 auto 20px auto;
     }
 
     .hero .description {
         margin: 0 auto 30px auto;
+        width: 100%;
+        max-width: 100%; /* Isso impede que o texto seja cortado */
+        padding: 0 5px;
+    }
+
+    .hero .title {
+        font-size: 2.5rem; /* Reduz título no mobile se necessário */
     }
 
     .hero-actions {
