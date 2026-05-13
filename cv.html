@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Gustavo Moreira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+            --muted: #555555;
+            --border: #eeeeee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg);
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--text);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        .header-info h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-bottom: 5px;
+        }
+
+        .header-info p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .header-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--text);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            transform: scale(1.5);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--muted);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .content-item {
+            margin-bottom: 20px;
+        }
+
+        .content-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .content-item .meta {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 5px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--text);
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        .no-print {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-print {
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: opacity 0.3s;
+        }
+
+        .btn-print:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <p style="margin-bottom: 10px; color: #666; font-weight: 500;">Clique no botão abaixo para baixar o seu currículo em PDF direto.</p>
+        <button class="btn-print" onclick="downloadPDF()">Baixar Currículo PDF</button>
+    </div>
+
+    <div class="cv-container" id="cv-content">
+        <header>
+            <div class="header-info">
+                <h1>Gustavo Moreira</h1>
+                <p>Desenvolvedor de Sistemas | Automações Inteligentes</p>
+            </div>
+            <div class="header-photo">
+                <img src="profile.png" alt="Gustavo Moreira">
+            </div>
+        </header>
+
+        <div class="contact-grid">
+            <div class="contact-item">📍 Assis, São Paulo</div>
+            <div class="contact-item">📧 Gustavomoreiraw@gmail.com</div>
+            <div class="contact-item">🔗 linkedin.com/in/gusmcoelho</div>
+            <div class="contact-item">💻 github.com/gusmcoelho</div>
+        </div>
+
+        <section>
+            <h2>Resumo Profissional</h2>
+            <p>Desenvolvedor apaixonado por tecnologia e inovação, com foco em construção de soluções eficientes. Atualmente cursando Gestão da Tecnologia e Informação, busco aplicar conhecimentos técnicos em Java e Python para resolver problemas complexos e contribuir em projetos de alto impacto.</p>
+        </section>
+
+        <section>
+            <h2>Formação Acadêmica</h2>
+            <div class="content-item">
+                <h3>Tecnologia em Gestão da Tecnologia e Informação</h3>
+                <div class="meta">Faculdade de Tecnologia de São Paulo (FATEC-SP) | 2024 - Presente (4º de 6 semestres)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Linguagens & Web</h3>
+                    <ul class="skill-list">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Interesses & Áreas</h3>
+                    <ul class="skill-list">
+                        <li>Inteligência Artificial</li>
+                        <li>Engenharia de Prompt</li>
+                        <li>Desenvolvimento Web</li>
+                        <li>Gestão de TI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Idiomas</h2>
+            <ul class="skill-list">
+                <li>Português (Nativo)</li>
+                <li>Inglês (Avançado)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Cursos & Certificações</h2>
+            <div class="content-item">
+                <h3>Lógica e Programação</h3>
+                <div class="meta">Alura</div>
+            </div>
+            <div class="content-item">
+                <h3>Certificação White Belt</h3>
+                <div class="meta">Metodologia Lean Six Sigma para melhoria de processos.</div>
+            </div>
+            <div class="content-item">
+                <h3>Software e Hardware</h3>
+                <div class="meta">CENAIC</div>
+            </div>
+            <div class="content-item">
+                <h3>Digitação</h3>
+                <div class="meta">CENAIC</div>
+            </div>
+            <div class="content-item">
+                <h3>Lei Geral de Proteção de Dados (LGPD)</h3>
+                <div class="meta">Fundação Bradesco</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Biblioteca para gerar PDF direto -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('cv-content');
+            const opt = {
+                margin:       [10, 10],
+                filename:     'Curriculo_Gustavo_Moreira.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // Adiciona uma classe temporária para garantir que o fundo seja branco no PDF
+            element.style.boxShadow = 'none';
+            
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Restaura o estilo após o download
+                element.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+            });
+        }
+    </script>
+
+</body>
+</html>
