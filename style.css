@@ -57,7 +57,13 @@ p {
 }
 
 .section {
-    padding: 120px 0;
+    padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
 }
 
 .section-title {
@@ -137,14 +143,17 @@ p {
 
 /* Buttons */
 .btn {
-    display: inline-block;
-    padding: 14px 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: var(--transition);
     text-align: center;
-    border-radius: 0;
+    border-radius: 4px;
 }
 
 .btn-primary {
@@ -260,7 +269,8 @@ p {
 
 .hero-actions {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 /* About Section */
@@ -299,7 +309,7 @@ p {
 }
 
 .about-skills {
-    padding-left: 20px;
+    padding-left: 30px;
     border-left: 1px solid var(--border-color);
 }
 
@@ -486,48 +496,66 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .container {
-        padding: 0 1.2rem; /* Aumenta a área útil em telas pequenas */
+        padding: 0 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .hero {
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: 60px;
     }
 
     .hero-layout {
         flex-direction: column-reverse;
         text-align: center;
-        padding-top: 40px;
-        width: 100%;
-        overflow-x: hidden;
+        gap: 3rem;
     }
 
     .hero-image {
-        width: 240px;
-        height: 240px;
-        margin: 0 auto 20px auto;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .hero .title {
+        font-size: 2.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
     }
 
     .hero .description {
         margin: 0 auto 30px auto;
-        width: 100%;
-        max-width: 100%; /* Isso impede que o texto seja cortado */
-        padding: 0 5px;
-    }
-
-    .hero .title {
-        font-size: 2.5rem; /* Reduz título no mobile se necessário */
+        font-size: 0.95rem;
     }
 
     .hero-actions {
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
     }
 
     .hero-actions .btn {
-        width: 100%; /* Botões ocupam largura total no mobile para facilitar o clique */
-        max-width: 280px; /* Mas sem ficar exageradamente grandes */
+        width: 100%;
+        max-width: 320px;
     }
     
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 50px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .languages {
+        align-items: center;
     }
 
     .about-skills {
@@ -537,8 +565,21 @@ footer {
         padding-top: 40px;
     }
 
+    .skill-category h3 {
+        text-align: center;
+    }
+
+    .skill-tags {
+        align-items: center;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 25px;
     }
     
     .mobile-menu-btn {
@@ -549,20 +590,32 @@ footer {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
-        height: 100vh;
+        width: 80%;
+        height: 100dvh;
         background-color: var(--bg-main);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 3rem;
-        transition: right 0.4s ease;
+        gap: 2.5rem;
+        transition: right 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         border-left: 1px solid var(--border-color);
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
     }
 
     .nav-links.active {
         right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+
+    .social-links {
+        gap: 25px;
     }
 }
 
@@ -571,14 +624,14 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100dvh;
     background-color: var(--bg-main);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 .loader.loaded {

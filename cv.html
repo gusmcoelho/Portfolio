@@ -144,6 +144,34 @@
             color: var(--text);
         }
 
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .cv-container {
+                padding: 30px 20px;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .header-info h1 {
+                font-size: 1.8rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media print {
             body {
                 background: none;

@@ -3,7 +3,9 @@ window.addEventListener('load', () => {
     const loader = document.querySelector('.loader');
     setTimeout(() => {
         loader.classList.add('loaded');
-    }, 1800);
+        // Trigger animations immediately after loader starts fading
+        setTimeout(animarScroll, 400);
+    }, 1000); // Reduzido para 1s para melhor UX
 });
 
 // Mobile Menu
@@ -59,7 +61,5 @@ function animarScroll() {
 
 window.addEventListener('scroll', animarScroll);
 
-// Chama uma vez no inicio pra carregar a tela
-setTimeout(() => {
-    animarScroll();
-}, 2000);
+// Chama uma vez no inicio pra garantir
+animarScroll();
