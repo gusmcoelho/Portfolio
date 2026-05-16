@@ -356,6 +356,8 @@ p {
     gap: 20px;
     transition: var(--transition);
     height: 100%;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .project-card:hover {
